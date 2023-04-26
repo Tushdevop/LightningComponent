@@ -1,18 +1,12 @@
-<!--
-create a Lightning component. First, we write code for Datatable and defined attributes to 
-retain Datatable data. We defined a columns attribute so we can show the table accordingly. 
-All columns are sortable=”true”. For pagination, we defined attributes like pagesize, 
-totalrecords, currentPage, etc. For sorting the data 
-we will call a method in the component controller by clicking on the column header.
--->
-<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="LightningCompSortingPagnation">
 
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="LightningCompSortingPagination">
+   
     <!-- call doInit method on component load -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <!-- aura attributes to store data -->
     <aura:attribute name="listOfAccounts" type="list"/> 
     <aura:attribute name="paginationList" type="list"/>
-
+     
     <aura:attribute name="currentPageNumber" type="Integer" default="1"/>
     <aura:attribute name="pageSize" type="Integer" default="10"/>
     <aura:attribute name="totalPages" type="Integer" default="0"/>
@@ -23,8 +17,7 @@ we will call a method in the component controller by clicking on the column head
     <aura:attribute name="columns" type="List"/>
     <aura:attribute name="sortedBy" type="String" default="Name"/>
     <aura:attribute name="sortedDirection" type="string" default="asc" />
-
-
+     
     <div class="slds-tabs_card">
         <div class="slds-page-header">
             <div class="slds-page-header__row">
@@ -40,7 +33,7 @@ we will call a method in the component controller by clicking on the column head
                                 <div class="slds-page-header__name-title">
                                     <h1>
                                         <span>Lightning Component Datatable with Sorting and pagination</span>
-                                        <span class="slds-page-header__title slds-truncate" title="TechDicer">Pagination Example</span>
+                                        <span class="slds-page-header__title slds-truncate" title="TechDicer">TechDicer</span>
                                     </h1>
                                 </div>
                             </div>
@@ -50,7 +43,7 @@ we will call a method in the component controller by clicking on the column head
             </div>
         </div>
     </div> <br/>
-
+     
     <lightning:card title="Account Data with Sorting and Pagination" iconName="standard:account">
         <p class="slds-var-p-around_small">
             <lightning:layout multipleRows="true" horizontalAlign="center">
@@ -98,5 +91,5 @@ we will call a method in the component controller by clicking on the column head
             </lightning:layout>
         </p>
     </lightning:card>
-
-</aura:component>	
+     
+</aura:component>

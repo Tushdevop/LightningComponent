@@ -5,7 +5,6 @@
 *
 */
 public with sharing class LightningCompSortingPagination {
-    public LightningCompSortingPagination() {
             @AuraEnabled
             public static List<Account> fetchAccountData(){
                 try {
@@ -16,5 +15,4 @@ public with sharing class LightningCompSortingPagination {
                     throw new AuraHandledException(e.getMessage());
                 }
             }
-    }
 }
