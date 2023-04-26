@@ -1,0 +1,9 @@
+<aura:component>
+    <p>Click button to thro an Error</p>
+
+    <div aura:id="div1">
+
+        
+    </div>
+    <lightning:button label="Click Me" onclick="{!c.throwError}"></lightning:button>
+</aura:component>	
