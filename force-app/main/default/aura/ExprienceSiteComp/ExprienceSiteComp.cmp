@@ -1,0 +1,41 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+                access="global" controller="ObjectDataFetch">
+	
+    <aura:attribute name="CertList" type="List"/>
+     
+    <p>Get All Details-</p> <br/>
+    <lightning:button label="Get Details" onclick="{!c.handleClick}"/>
+   <lightning:card iconName="standard:work_capacity_usage" title="Certification Details">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Cert Name">CertName</div>
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Desc">Desciption</div>
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Date">Date</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+       			<aura:iteration items="{!v.CertList}" var="item">
+       					<tr class="slds-hint-parent">
+                        <td data-label="Cert Name">
+                            <div class="slds-truncate" title="CName">{!item.Name}</div>  
+                        </td>
+                        <td data-label="Desc">
+                            <div class="slds-truncate" title="DName">{!item.Desciption__c}</div>  
+                        </td>
+                         <td data-label="Date">
+                            <div class="slds-truncate" title="DaName">{!item.Certification_Date__c}</div>  
+                        </td>
+                    	</tr>
+                </aura:iteration>
+        	</tbody>
+       </table>
+    </lightning:card>
+    
+</aura:component>
