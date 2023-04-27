@@ -1,0 +1,8 @@
+<apex:page >
+    <!-- Begin Default Content REMOVE THIS -->
+    <br/>
+    <h1>Congratulations</h1>
+    <br/><br/>
+    <h2>This is your new Visualforce Page</h2>
+    <!-- End Default Content REMOVE THIS -->
+</apex:page>

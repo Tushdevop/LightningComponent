@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="vfHost" type="String" default="codepractice-dev-ed--c.develop.vf.force.com"/>
+    <br/>
+    <h1>This is aura component....</h1>
+    <hr/>
+    <iFrame aura:id="vfFrame" 
+            src="{!'https://'+v.vfHost+'/apex/VFpageForAura'}"
+            height="300" width="500"/>
+</aura:component>
