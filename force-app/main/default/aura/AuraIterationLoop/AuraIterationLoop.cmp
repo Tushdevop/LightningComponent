@@ -1,0 +1,12 @@
+<aura:component controller="GetAccountsforAura">
+    <aura:attribute name="accList" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    
+    <br/>
+    <aura:iteration items="{!v.accList}" var="acc">
+    Account Name: {!acc.Name}<br/>
+    </aura:iteration>
+    
+    <Lightning:button label="Click Me" onclick="{!c.handleClick}"/>
+
+</aura:component>
